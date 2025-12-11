@@ -1,0 +1,38 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rsbuild build",
+    "check": "biome check --write",
+    "dev": "rsbuild dev --open",
+    "format": "biome format --write",
+    "preview": "rsbuild preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.1.0",
+    "@jelper/component": "^1.1.1",
+    "antd": "^6.1.0",
+    "dayjs": "^1.11.19",
+    "normalize.css": "^8.0.1",
+    "qiankun": "^2.10.16",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-router": "^7.10.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.8",
+    "@rsbuild/core": "^1.6.12",
+    "@rsbuild/plugin-react": "^1.4.2",
+    "@rsbuild/plugin-sass": "^1.4.0",
+    "@storybook/addon-docs": "^10.1.4",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "storybook": "^10.1.4",
+    "storybook-react-rsbuild": "^3.1.0",
+    "typescript": "^5.9.3"
+  }
+}
