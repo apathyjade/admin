@@ -8,7 +8,8 @@ import { RouterProvider } from 'react-router';
 const theme: any = {
   token: {
     borderRadius: 2,
-    colorPrimary: '#1765ad',
+    colorPrimary: '#1677ff',
+    colorBgBase: '#f2f3f5'
   },
 };
 

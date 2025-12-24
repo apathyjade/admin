@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { registerMicroApps, start } from 'qiankun';
 import App from './App';
 
-import './global.scss';
+import './global.css';
 
 const rootEl = document.getElementById('root');
 if (rootEl) {

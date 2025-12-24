@@ -1,0 +1,16 @@
+
+@import 'normalize.css';
+
+@layer 
+  design-tokens,   /* 颜色、间距等变量 */
+  reset,           /* 浏览器重置 */
+  typography,      /* 文字样式 */
+  layout,          /* 布局组件 */
+  antd,
+  components,      /* 业务组件 */
+  utilities;       /* 工具类 */
+
+:root {
+  /* --primary: #221c46; */
+  --backgroud: #f2f3f5;
+}

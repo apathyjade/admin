@@ -2,9 +2,9 @@
 import { NavLink, Outlet, useNavigate  } from 'react-router';
 import {Row, Column} from '@jelper/component';
 
-import $css from './index.module.scss';
+import $css from './index.module.css';
 import { Suspense } from 'react';
-import { Menu, } from 'antd';
+import { ConfigProvider, Menu, } from 'antd';
 import { ContainerOutlined, DesktopOutlined, MailOutlined, PieChartOutlined } from '@ant-design/icons';
 
 import type { MenuProps } from 'antd';
@@ -23,37 +23,49 @@ const items: MenuItem[] = [
     ],
   },
 ];
+
+const theme: any = {
+  token: {
+    activeBarBorderWidth: 0,
+  },
+};
+
+const HeadHeight = 48;
+
 const Layout = () => {
   let navigate = useNavigate();
   return (
-    <Row className={$css.container} align="stretch">
-      <Row.Item className={$css.side} width="240px" fixed>
-        <NavLink to="/home">home</NavLink>
-        <br />
-        <NavLink to="/about">about</NavLink>
-        <br />
-        <NavLink to="/baidu">about</NavLink>
-        <Menu
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
-          mode="inline"
-          // theme="dark"
-          inlineCollapsed={false}
-          items={items}
-          onClick={({key}) => navigate(key)}
-        />
-      </Row.Item>
-      <Row.Item>
-        <Column>
-          <Column.Item fixed height="180px"></Column.Item>
-          <Column.Item>
-            <Suspense fallback={<div>加载中...</div>}>
-              <Outlet />
-            </Suspense>
-          </Column.Item>
-        </Column>
-      </Row.Item>
-    </Row>
+    <ConfigProvider theme={theme}>
+      <Row className={$css.container} align="stretch">
+        <Row.Item className={$css.side} width="240px" fixed>
+          <Column>
+            <Column.Item height={HeadHeight} fixed>
+
+            </Column.Item>
+            <Column.Item>
+              <Menu
+                mode="inline"
+                inlineCollapsed={false}
+                defaultSelectedKeys={['1']}
+                defaultOpenKeys={['sub1']}
+                items={items}
+                onClick={({key}) => navigate(key)}
+              />
+            </Column.Item>
+          </Column>
+        </Row.Item>
+        <Row.Item>
+          <Column>
+            <Column.Item fixed height={HeadHeight}></Column.Item>
+            <Column.Item>
+              <Suspense fallback={<div>加载中...</div>}>
+                <Outlet />
+              </Suspense>
+            </Column.Item>
+          </Column>
+        </Row.Item>
+      </Row>
+    </ConfigProvider>
   );
 };
 

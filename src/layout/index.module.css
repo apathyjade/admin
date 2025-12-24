@@ -1,0 +1,8 @@
+
+.container {
+  height: 100vh;
+  .side {
+    background: #f3f5f7;
+    box-shadow: 1px 0 1px #e3e5e7;
+  }
+}
