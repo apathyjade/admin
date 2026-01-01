@@ -1,8 +1,23 @@
-
-.container {
-  height: 100vh;
+.layout {
+  padding: 0 4px 4px;
+  background: #fef7ee; /* 橙色主题的浅色背景 */
+  .main {
+    border: 1px solid #fdba74; /* 橙色主题 - 橙色300 */
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 -4px 8px 2px #ffedd5; /* 橙色主题 - 橙色100 */
+  }
   .side {
-    background: #f3f5f7;
-    box-shadow: 1px 0 1px #e3e5e7;
+    transition: width 0.3s;
+    background: #FFFBF5; /* 橙色主题的浅色背景变体 */
+    box-shadow: 1px 0 0px #FED7AA; /* 橙色主题 - 橙色200 */
+    z-index: 1;
+  }
+  .head {
+    background: #FFFFFF;
+    box-shadow:
+      0 1px 0px #FED7AA, /* 橙色主题 - 橙色200 */
+      0px 8px 8px 1px #FFFBF5; /* 橙色主题的浅色背景 */
+    ;
   }
 }

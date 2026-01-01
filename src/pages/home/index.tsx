@@ -1,6 +1,6 @@
 
 const Home = (props: { test: string }) => {
-  return <>home: {props.test}</>
+  return <div className="text-3xl">home: {props.test}</div>
 };
 
 export default Home;

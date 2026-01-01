@@ -4,5 +4,17 @@ import { pluginSass } from '@rsbuild/plugin-sass';
 
 // Docs: https://rsbuild.rs/config/
 export default defineConfig({
-  plugins: [pluginReact(), pluginSass()],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["postcss-loader"],
+        type: "css/auto",
+      },
+    ],
+  },
+  plugins: [
+    pluginReact(),
+    pluginSass(),
+  ],
 });

@@ -1,6 +1,6 @@
-
-import { NavLink, Outlet, useNavigate  } from 'react-router';
-import {Row, Column} from '@jelper/component';
+import classNames from 'classnames';
+import { Outlet, useNavigate  } from 'react-router';
+import { Row, Col } from '@jelper/component';
 
 import $css from './index.module.css';
 import { Suspense } from 'react';
@@ -30,41 +30,47 @@ const theme: any = {
   },
 };
 
-const HeadHeight = 48;
+const HeadHeight = 64;
 
 const Layout = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <ConfigProvider theme={theme}>
-      <Row className={$css.container} align="stretch">
-        <Row.Item className={$css.side} width="240px" fixed>
-          <Column>
-            <Column.Item height={HeadHeight} fixed>
+      <Col className={classNames($css.layout)}> 
+        <Col.Item className={$css.top} $height={48} $fixed>
+          test
+        </Col.Item>
+        <Col.RowItem className={$css.main}>
+          <Row.Item className={$css.side} $width={240} $fixed>
+            <Col>
+              <Col.Item $height={HeadHeight} $fixed>
 
-            </Column.Item>
-            <Column.Item>
-              <Menu
-                mode="inline"
-                inlineCollapsed={false}
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
-                items={items}
-                onClick={({key}) => navigate(key)}
-              />
-            </Column.Item>
-          </Column>
-        </Row.Item>
-        <Row.Item>
-          <Column>
-            <Column.Item fixed height={HeadHeight}></Column.Item>
-            <Column.Item>
-              <Suspense fallback={<div>加载中...</div>}>
-                <Outlet />
-              </Suspense>
-            </Column.Item>
-          </Column>
-        </Row.Item>
-      </Row>
+              </Col.Item>
+              <Col.Item>
+                <Menu
+                  mode="inline"
+                  inlineCollapsed={false}
+                  defaultSelectedKeys={['1']}
+                  defaultOpenKeys={['sub1']}
+                  items={items}
+                  onClick={({key}) => navigate(key)}
+                />
+              </Col.Item>
+            </Col>
+          </Row.Item>
+          <Row.Item>
+            <Col>
+              <Col.Item className={$css.head} $fixed $height={HeadHeight}>
+              </Col.Item>
+              <Col.Item>
+                <Suspense fallback={<div>加载中...</div>}>
+                  <Outlet />
+                </Suspense>
+              </Col.Item>
+            </Col>
+          </Row.Item>
+        </Col.RowItem>
+      </Col>
     </ConfigProvider>
   );
 };

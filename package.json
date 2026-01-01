@@ -14,14 +14,19 @@
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
-    "@jelper/component": "^1.1.1",
-    "antd": "^6.1.0",
+    "@jelper/component": "^2.0.1",
+    "@tailwindcss/postcss": "^4.1.18",
+    "antd": "^6.1.1",
+    "classnames": "^2.5.1",
     "dayjs": "^1.11.19",
     "normalize.css": "^8.0.1",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
     "qiankun": "^2.10.16",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "react-router": "^7.10.1"
+    "react-router": "^7.10.1",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.8",
