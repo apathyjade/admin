@@ -1,0 +1,28 @@
+.layout {
+  /* padding: 0 4px 4px; */
+  .main {
+    border-radius: 8px;
+  }
+  .side {
+    background: var(--block_bgc);
+    box-shadow:
+      0 1px 1px 1px var(--border_color),
+      0 2px 4px 4px var(--mask_color);
+    transition: flex 0.3s;
+    text-wrap: nowrap;
+    word-break: keep-all;
+
+    z-index: 1;
+    .title {
+      overflow: hidden;
+      text-overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .head {
+    background: var(--block_bgc);
+    box-shadow:
+      1px 0 1px 1px var(--border_color),
+      2px 0 4px 4px var(--mask_color);
+  }
+}

@@ -1,5 +1,3 @@
-packages:
-  - apps/*
-
 ignoredBuiltDependencies:
   - core-js
+  - esbuild

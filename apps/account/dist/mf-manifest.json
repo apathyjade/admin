@@ -1,0 +1,88 @@
+{
+  "id": "rslib_provider",
+  "name": "rslib_provider",
+  "metaData": {
+    "name": "rslib_provider",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "1.0.0",
+      "buildName": "account"
+    },
+    "remoteEntry": {
+      "name": "static/js/rslib_provider.d46e551e.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "rslib_provider",
+    "pluginVersion": "0.22.0",
+    "prefetchInterface": false,
+    "publicPath": "http://localhost:3004/"
+  },
+  "shared": [
+    {
+      "id": "rslib_provider:react-dom",
+      "name": "react-dom",
+      "version": "19.2.3",
+      "singleton": true,
+      "requiredVersion": "^19.2.3",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/117.531c6032.js",
+            "static/js/async/498.f0432c58.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "rslib_provider:react",
+      "name": "react",
+      "version": "19.2.3",
+      "singleton": true,
+      "requiredVersion": "^19.2.3",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/986.7d1b48fe.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "rslib_provider:ProductCard",
+      "name": "ProductCard",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/__federation_expose_ProductCard.3d4bdfd1.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./ProductCard"
+    }
+  ]
+}

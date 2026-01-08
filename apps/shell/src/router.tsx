@@ -2,6 +2,9 @@
 import React from "react";
 import { createBrowserRouter } from "react-router";
 
+
+const ProductCard = React.lazy(() => import('rslib_provider/ProductCard'));
+
 import Layout from './layout';
 
 export default createBrowserRouter([
@@ -18,15 +21,14 @@ export default createBrowserRouter([
           ]);
           return { Component: (props) => Component.default({ ...props, test: "test" }) };
         },
-        // Component: React.lazy(() => import('./pages/home')),
       },
       {
         path: 'about',
         Component: React.lazy(() => import('./pages/about')),
       },
       {
-        path: 'baidu',
-        Component: () => <div id="micro-app" />,
+        path: 'product',
+        Component: () => <ProductCard product={{ name: 'test' }} />,
       },
       {
         path: '*',

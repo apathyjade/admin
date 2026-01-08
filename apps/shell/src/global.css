@@ -1,0 +1,14 @@
+/* @import 'normalize.css'; */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+}
+
+@layer 
+  design-tokens,   /* 颜色、间距等变量 */
+  reset,           /* 浏览器重置 */
+  typography,      /* 文字样式 */
+  layout,          /* 布局组件 */
+  antd,
+  components,      /* 业务组件 */
+  utilities;       /* 工具类 */
