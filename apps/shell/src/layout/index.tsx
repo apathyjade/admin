@@ -5,12 +5,11 @@ import { useBoolState } from '@jelper/hooks';
 
 import $css from './index.module.css';
 import { Suspense } from 'react';
-import { Avatar, Button, ConfigProvider, Divider, Dropdown, Menu, Switch, } from 'antd';
+import { Avatar, Button, Divider, Dropdown, Menu, Switch, } from 'antd';
 import { ContainerOutlined, DesktopOutlined, MailOutlined, MenuFoldOutlined, MenuUnfoldOutlined, MoonOutlined, PieChartOutlined, SettingOutlined, SunOutlined, UserOutlined } from '@ant-design/icons';
 
 import type { MenuProps } from 'antd';
 import { themeCtxComposer } from '../composers';
-import { tokens } from 'storybook/theming';
 type MenuItem = Required<MenuProps>['items'][number];
 const items: MenuItem[] = [
   { key: '1', icon: <PieChartOutlined />, label: 'Option 1' },
@@ -78,7 +77,7 @@ const Layout = () => {
               <Row.Item $maxWidth={'70%'}>
 
               </Row.Item>
-              <Row.RowItem $gap={8} $justify="flex-end" $align="center" >
+              <Row.RowItem $fixed  $width={200} $gap={8} $justify="flex-end" $align="center" >
                 <Switch
                   className={'mr-16'}
                   checkedChildren={<SunOutlined />}
@@ -94,11 +93,11 @@ const Layout = () => {
                 
               </Row.RowItem>
             </Col.RowItem>
-            <Col.Item className="p-16">
+            <Col.ColItem $gap={16} className="p-16">
               <Suspense fallback={<div>加载中...</div>}>
                 <Outlet />
               </Suspense>
-            </Col.Item>
+            </Col.ColItem >
           </Col>
         </Row.Item>
       </Col.RowItem>

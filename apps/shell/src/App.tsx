@@ -6,7 +6,6 @@ import router from './router';
 import { RouterProvider } from 'react-router';
 import { themeCtxComposer } from './composers';
 import { useMemo } from 'react';
-import { components } from 'storybook/internal/components';
 
 const App = () => {
   const { themeData } = themeCtxComposer.useComposerCtx();
@@ -31,8 +30,8 @@ const App = () => {
         colorBgBase: themeData.block_bgc,
         colorBorder: themeData.border_color,
 
-        colorBgContainer: themeData.mask_color,
-        colorBgElevated: themeData.mask_color,
+        colorBgContainer: themeData.block_bgc,
+        colorBgElevated: themeData.block_bgc,
         borderRadius: 2,
       },
       cssVar: {

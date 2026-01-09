@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 const Home = (props: { test: string }) => {
   const [state, setState] = useState(0);
   useEffect(() => {
-    console.log(12);
   });
   return (
     <>

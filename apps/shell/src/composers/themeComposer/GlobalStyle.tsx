@@ -1,7 +1,7 @@
 
+import { memo } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import theme, { type ThemeData } from './theme';
-import { memo } from 'react';
 
 const createCssVariables = (themeData: ThemeData): string => {
   const vars: string[] = [];
