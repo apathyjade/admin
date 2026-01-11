@@ -39,6 +39,7 @@ const App = () => {
       },
       components: {
         Menu: {
+          activeBarBorderWidth: '0px',
           collapsedWidth: '64px',
         }
       }

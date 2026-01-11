@@ -1,5 +1,5 @@
 
-import { useCallback, useEffect, useState, type FC, type JSX } from 'react';
+import { useCallback, useEffect, useState, type FC } from 'react';
 import { createCtxComposer } from '@jelper/context-composer';
 import themeMap from './theme';
 import GlobalStyle from './GlobalStyle';

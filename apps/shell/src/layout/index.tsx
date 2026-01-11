@@ -51,26 +51,24 @@ const Layout = () => {
         test
       </Col.Item> */}
       <Col.RowItem className={$css.main}>
-        <Row.Item className={$css.side} $width={sideCollapsed ? 240 : 64} $fixed>
-          <Col>
-            <Col.RowItem $justify="center" $align="center" $height={HeadHeight} $fixed>
-              { sideCollapsed ? <Row.Item className={classNames($css.title, 'pl-16')} >AJ 后台系统</Row.Item> : undefined}
-              <Button color="default" size="large" variant="link" onClick={() => switchSideCollapsed()}>
-                { sideCollapsed ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
-              </Button>
-            </Col.RowItem>
-            <Col.Item>
-              <Menu
-                mode="inline"
-                inlineCollapsed={!sideCollapsed}
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
-                items={items}
-                onClick={({key}) => navigate(key)}
-              />
-            </Col.Item>
-          </Col>
-        </Row.Item>
+        <Row.ColItem className={$css.side} $width={sideCollapsed ? 240 : 64} $fixed>
+          <Col.RowItem $justify="center" $align="center" $height={HeadHeight} $fixed>
+            { sideCollapsed ? <Row.Item className={classNames($css.title, 'pl-16')} >AJ 后台系统</Row.Item> : undefined}
+            <Button color="default" size="large" variant="link" onClick={() => switchSideCollapsed()}>
+              { sideCollapsed ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
+            </Button>
+          </Col.RowItem>
+          <Col.Item>
+            <Menu
+              mode="inline"
+              inlineCollapsed={!sideCollapsed}
+              defaultSelectedKeys={['1']}
+              defaultOpenKeys={['sub1']}
+              items={items}
+              onClick={({key}) => navigate(key)}
+            />
+          </Col.Item>
+        </Row.ColItem>
         <Row.Item>
           <Col>
             <Col.RowItem $gap={16} className={classNames($css.head, 'pl-24 pr-24')} $fixed $height={HeadHeight} $justify="space-between">

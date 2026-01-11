@@ -4,9 +4,9 @@
   }
   .side {
     background: var(--block_bgc);
+    border-right: 1px solid var(--border_color);
     box-shadow:
-      0 1px 1px 1px var(--border_color),
-      0 2px 4px 4px var(--mask_color);
+      0 1px 8px 2px var(--mask_color);
     transition: flex 0.3s;
     text-wrap: nowrap;
     word-break: keep-all;

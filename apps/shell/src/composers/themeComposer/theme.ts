@@ -27,7 +27,7 @@ export const lightTheme = {
   site_bgc: '#e9edf4',
   text_color: '#36383B',
   block_bgc: '#fcfeff',
-  border_color: '#cfcfcf',
+  border_color: '#d2d2d2',
   mask_color: 'rgba(0, 0, 0, 0.02)',
   ...createTheme(LBlue),
 };
@@ -35,7 +35,7 @@ export const darkTheme = {
   site_bgc: '#1c1e1f',
   text_color: '#c2c3c5',
   block_bgc: '#131517',
-  border_color: '#333537',
+  border_color: '#2d2d2d',
   mask_color: 'rgba(255, 255, 255, 0.02)',
   ...createTheme(DBlue),
 };
