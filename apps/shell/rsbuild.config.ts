@@ -5,6 +5,12 @@ import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 
 // Docs: https://rsbuild.rs/config/
 export default defineConfig({
+  server: {
+    port: 3003,
+  },
+  output: {
+    assetPrefix: '/web',
+  },
   module: {
     rules: [
       {

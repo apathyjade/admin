@@ -3,13 +3,13 @@ import React from "react";
 import { createBrowserRouter } from "react-router";
 
 
-const ProductCard = React.lazy(() => import('rslib_provider/ProductCard'));
+// const ProductCard = React.lazy(() => import('rslib_provider/ProductCard'));
 
 import Layout from './layout';
 
 export default createBrowserRouter([
   {
-    path: '',
+    path: '/web',
     Component: Layout,
     children: [
       {
@@ -23,13 +23,17 @@ export default createBrowserRouter([
         },
       },
       {
+        path: 'map',
+        Component: React.lazy(() => import('./pages/map')),
+      },
+      {
         path: 'about',
         Component: React.lazy(() => import('./pages/about')),
       },
-      {
-        path: 'product',
-        Component: () => <ProductCard product={{ name: 'test' }} />,
-      },
+    //   {
+    //     path: 'product',
+    //     Component: () => <ProductCard product={{ name: 'test' }} />,
+    //   },
       {
         path: '*',
         Component: () => <>error</>,
