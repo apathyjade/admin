@@ -11,14 +11,22 @@ export default defineConfig({
   output: {
     assetPrefix: '/web',
   },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ["postcss-loader"],
-        type: "css/auto",
+  tools: {
+    rspack: {
+      module: {
+        rules: [
+          {
+            test: /\.wgsl$/,
+            type: "asset/source",
+          },
+          // {
+          //   test: /\.css$/,
+          //   use: ["postcss-loader"],
+          //   type: "css/auto",
+          // },
+        ],
       },
-    ],
+    },
   },
   plugins: [
     pluginReact(),

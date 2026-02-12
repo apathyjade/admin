@@ -30,6 +30,10 @@ export default createBrowserRouter([
         path: 'about',
         Component: React.lazy(() => import('./pages/about')),
       },
+      {
+        path: 'gpu',
+        Component: React.lazy(() => import('./pages/gpu')),
+      },
     //   {
     //     path: 'product',
     //     Component: () => <ProductCard product={{ name: 'test' }} />,
